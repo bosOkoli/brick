@@ -13,6 +13,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SafeArea(child: LandingPageScreen()));
+        home: SafeArea(child: LandingPageScreen()),);
   }
 }

@@ -1,3 +1,4 @@
+import 'package:brick/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignUpForm extends StatefulWidget {
@@ -121,7 +122,12 @@ class SignUpFormState extends State<SignUpForm> {
                       height: 8.0,
                     ),
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const WelcomeScreen()));
+                        },
                         child: Container(
                             height: 50,
                             decoration: const BoxDecoration(

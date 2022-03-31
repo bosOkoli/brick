@@ -1,4 +1,4 @@
-import 'package:brick/authentication_screen.dart';
+import 'package:brick/screens/authentication_screen.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageScreen extends StatefulWidget {

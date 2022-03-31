@@ -1,3 +1,4 @@
+import 'package:brick/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatefulWidget {
@@ -17,121 +18,123 @@ class LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 0),
-          child: Column(children: [
-            Form(
-              key: _formKey,
-              child: Column(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: TextFormField(
-                      cursorColor: const Color.fromARGB(255, 121, 19, 12),
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 121, 19, 12)),
-                      decoration: InputDecoration(
-                          labelStyle: const TextStyle(
-                              color: Color.fromARGB(255, 121, 19, 12)),
-                          labelText: 'Username',
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 2,
-                                color: Color.fromARGB(58, 143, 143, 143)),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1,
-                                color: Color.fromARGB(255, 121, 19, 12)),
-                            borderRadius: BorderRadius.circular(15),
-                          )),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10),
-                    child: TextFormField(
-                      obscureText: isPasswordHidden,
-                      cursorColor: const Color.fromARGB(255, 121, 19, 12),
-                      style: const TextStyle(
-                          color: Color.fromARGB(255, 121, 19, 12)),
-                      decoration: InputDecoration(
-                          suffixIcon: InkWell(
-                              onTap: _togglePasswordView,
-                              child: isPasswordHidden == true
-                                  ? const Icon(Icons.visibility,
-                                      color: Color.fromARGB(235, 160, 157, 157))
-                                  : const Icon(Icons.visibility_off,
-                                      color:
-                                          Color.fromARGB(235, 160, 157, 157))),
-                          labelStyle: const TextStyle(
-                              color: Color.fromARGB(255, 121, 19, 12)),
-                          labelText: 'Password',
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 2,
-                                color: Color.fromARGB(58, 143, 143, 143)),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1,
-                                color: Color.fromARGB(255, 121, 19, 12)),
-                            borderRadius: BorderRadius.circular(15),
-                          )),
-                    ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
-                      Text(
-                        'Forget Password',
-                        style: TextStyle(
-                            color: Color.fromARGB(235, 160, 157, 157)),
-                        textAlign: TextAlign.end,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 8.0,
-                  ),
-                  TextButton(
-                      onPressed: () {},
-                      child: Container(
-                          height: 50,
-                          decoration: const BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(15)),
-                              color: Color.fromARGB(235, 180, 179, 179)),
-                          child: const Center(
-                              child: Text(
-                            'Login',
-                            style: TextStyle(fontSize: 15, color: Colors.white),
-                          ))))
-                ],
-              ),
-            ),
-            const SizedBox(height: 5),
-            Row(
-              children: const [
-                Expanded(
-                    child: Divider(
-                        thickness: 2,
-                        color: Color.fromARGB(235, 210, 208, 208))),
+        Column(children: [
+          Form(
+            key: _formKey,
+            child: Column(
+              children: [
                 Padding(
-                  padding: EdgeInsets.only(right: 8, left: 8),
-                  child: Text('Or sign in with',
-                      style:
-                          TextStyle(color: Color.fromARGB(235, 206, 187, 187))),
+                  padding: const EdgeInsets.only(top: 10),
+                  child: TextFormField(
+                    cursorColor: const Color.fromARGB(255, 121, 19, 12),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 121, 19, 12)),
+                    decoration: InputDecoration(
+                        labelStyle: const TextStyle(
+                            color: Color.fromARGB(255, 121, 19, 12)),
+                        labelText: 'Username',
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(58, 143, 143, 143)),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              width: 1,
+                              color: Color.fromARGB(255, 121, 19, 12)),
+                          borderRadius: BorderRadius.circular(15),
+                        )),
+                  ),
                 ),
-                Expanded(
-                    child: Divider(
-                        thickness: 2,
-                        color: Color.fromARGB(235, 206, 187, 187)))
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: TextFormField(
+                    obscureText: isPasswordHidden,
+                    cursorColor: const Color.fromARGB(255, 121, 19, 12),
+                    style: const TextStyle(
+                        color: Color.fromARGB(255, 121, 19, 12)),
+                    decoration: InputDecoration(
+                        suffixIcon: InkWell(
+                            onTap: _togglePasswordView,
+                            child: isPasswordHidden == true
+                                ? const Icon(Icons.visibility,
+                                    color: Color.fromARGB(235, 160, 157, 157))
+                                : const Icon(Icons.visibility_off,
+                                    color:
+                                        Color.fromARGB(235, 160, 157, 157))),
+                        labelStyle: const TextStyle(
+                            color: Color.fromARGB(255, 121, 19, 12)),
+                        labelText: 'Password',
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(58, 143, 143, 143)),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(
+                              width: 1,
+                              color: Color.fromARGB(255, 121, 19, 12)),
+                          borderRadius: BorderRadius.circular(15),
+                        )),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: const [
+                    Text(
+                      'Forget Password',
+                      style: TextStyle(
+                          color: Color.fromARGB(235, 160, 157, 157)),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 8.0,
+                ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const WelcomeScreen()));
+                    },
+                    child: Container(
+                        height: 50,
+                        decoration: const BoxDecoration(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(15)),
+                            color: Color.fromARGB(235, 180, 179, 179)),
+                        child: const Center(
+                            child: Text(
+                          'Login',
+                          style: TextStyle(fontSize: 15, color: Colors.white),
+                        ))))
               ],
             ),
-          ]),
-        ),
+          ),
+          const SizedBox(height: 5),
+          Row(
+            children: const [
+              Expanded(
+                  child: Divider(
+                      thickness: 2,
+                      color: Color.fromARGB(235, 210, 208, 208))),
+              Padding(
+                padding: EdgeInsets.only(right: 8, left: 8),
+                child: Text('Or sign in with',
+                    style:
+                        TextStyle(color: Color.fromARGB(235, 206, 187, 187))),
+              ),
+              Expanded(
+                  child: Divider(
+                      thickness: 2,
+                      color: Color.fromARGB(235, 206, 187, 187)))
+            ],
+          ),
+        ]),
         const SizedBox(
           height: 15,
         ),
