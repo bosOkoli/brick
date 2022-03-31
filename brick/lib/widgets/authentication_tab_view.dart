@@ -1,4 +1,5 @@
 import 'package:brick/login.dart';
+import 'package:brick/widgets/signup.dart';
 import 'package:flutter/material.dart';
 
 class AuthenticationTabView extends StatefulWidget {
@@ -81,7 +82,7 @@ class _AuthenticationTabViewState extends State<AuthenticationTabView>
               height: 315,
               child: TabBarView(
                   controller: controller,
-                  children: const [LoginForm(), LoginForm()]),
+                  children: const [LoginForm(), SignUpForm()]),
               //),
             ),
           )

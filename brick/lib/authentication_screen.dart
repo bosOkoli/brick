@@ -33,22 +33,24 @@ class HomeScreen extends StatelessWidget {
               )),
         ],
       ),
-      bottomSheet: BottomSheet(
-        backgroundColor: Colors.black.withOpacity(0.2),
-        enableDrag: false,
-        elevation: 10.0,
-        onClosing: () {},
-        builder: (context) {
-          return Container(
-            decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(30.0),
-                    topLeft: Radius.circular(30.0))),
-            height: 490,
-            child: const AuthenticationTabView(),
-          );
-        },
+      bottomSheet: Expanded(
+        child: BottomSheet(
+          backgroundColor: Colors.black.withOpacity(0.2),
+          enableDrag: false,
+          elevation: 10.0,
+          onClosing: () {},
+          builder: (context) {
+            return Container(
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(30.0),
+                      topLeft: Radius.circular(30.0))),
+              height: 490,
+              child: const AuthenticationTabView(),
+            );
+          },
+        ),
       ),
     );
   }
