@@ -1,4 +1,4 @@
-import 'package:brick/home_screen.dart';
+import 'package:brick/authentication_screen.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
   }
 
   void _navigateHome() async {
-    await Future.delayed(const Duration(milliseconds: 4000), () {});
+    await Future.delayed(const Duration(milliseconds: 3000), () {});
     Navigator.pushReplacement(
         context, MaterialPageRoute(builder: (context) => const HomeScreen()));
   }
@@ -34,7 +34,6 @@ class _LandingPageScreenState extends State<LandingPageScreen> {
                     'assets/images/brickbg1.png',
                   ),
                   fit: BoxFit.fill),
-              color: Colors.white,
             ),
             child: Center(
               child: Container(
