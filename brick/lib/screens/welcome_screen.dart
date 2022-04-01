@@ -1,3 +1,4 @@
+import 'package:brick/screens/set_screen.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -31,21 +32,27 @@ class WelcomeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const Padding(
-                      padding: EdgeInsets.only(top: 10),
-                      child: Text('Welcome',
+                      padding: EdgeInsets.only(top: 50),
+                      child: Text('WELCOME',
                           style: TextStyle(
                               fontSize: 40,
+                              fontWeight: FontWeight.w600,
                               color: Color.fromARGB(175, 218, 197, 7))),
                     ),
                     const SizedBox(height: 10),
-                    const Text(
-                      'You\'ve taken the first step towards',
-                    ),
-                    const Text('your fitness journey'),
-                    const SizedBox(height: 50),
+                    const Text('You\'ve taken the first step towards',
+                        style: TextStyle(color: Color.fromARGB(255, 193, 190, 190))),
+                    const Text('achieving your fitness goals',
+                        style: TextStyle(color: Color.fromARGB(255, 193, 190, 190))),
+                    const SizedBox(height: 30),
                     FloatingActionButton(
                         backgroundColor: const Color.fromARGB(255, 121, 19, 12),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SetScreen()));
+                        },
                         child: const Icon(Icons.arrow_forward)),
                   ]));
         },
